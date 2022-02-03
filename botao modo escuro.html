@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Botão liga e desliga com CSS</title>
+  <style>
+    /* As margens e o enchimento do corpo é zerado, e uma cor de fundo para a pagina*/
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+/* Uma classe que será atribuida ao ativar o checkbox*/
+    .dark {
+      background-color: #05051d;
+    }
+
+    /* Centralização do conteúdo */
+    .center {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    input[type="checkbox"] {
+      position: relative;
+      width: 20px;
+      height: 10px;
+      -webkit-appearance: none; /* Aparência padrão do checkbox é anulada */
+      background-color: #564e79; /* cor de fundo */
+      outline: none; /* sem borda externa */
+      border-radius: 20px; /* arrendodamento dos cantos */
+      box-shadow: inset 0 0 5px rgba(135, 192, 238, 0.979); /* sombra interna */
+      transition: .2s; /* tempo de transição que vai ocorrer com a cor de fundo e com a posção da bolinha*/
+      cursor: pointer;/* estabelecer que o mouse vai ter uma aparência como se fosse clicar em um botão */
+    }
+
+    input:checked[type="checkbox"] {
+      background-color: rgb(122, 171, 245);/* cor de fundo que vai ser aplicada quando o checkbox tiver uma alteração para checked */
+    }
+/* O seletor :before pode criar objetos antes do elemento principal, no caso cria a bolinha do botão  */
+    input[type="checkbox"]:before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      background: #ffffff;
+      transform: scale(1.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: .2s;
+    }
+
+    input:checked[type="checkbox"]:before {
+      left: 10px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var btn1 = document.getElementById("btn1");
+      var body = document.getElementsByTagName("body");
+      btn1.addEventListener("change", function () {
+        if (btn1.checked == true) {
+          body[0].classList.add("dark");
+        } else {
+          body[0].classList.remove("dark");
+        }
+
+      })
+
+    }
+  </script>
+</head>
+
+<body id="body">
+  <div class="center">
+    <input id="btn1" type="checkbox" name="" value="">
+  </div>
+</body>
+
+</html>

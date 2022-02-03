@@ -1,0 +1,220 @@
+/* 
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+
+  RESET CSS
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+main{
+  display:flex;
+  justify-content:center
+}
+  
+
+
+/*Modo Noturno*/
+.dark section{
+  background-image:url(./imagem\ dark.jpg);
+  box-shadow: -20px -20px 0px 0px gray;
+  color:#1976d2;
+}
+.dark .listatarefas li{
+  background-color:rgba(23, 23, 94, 0.527);
+  
+}
+
+.dark header p{
+  border-bottom:2px dashed rgb(167, 36, 79)
+}
+.dark .formulariodetarefas button{
+  background-color:rgb(13, 108, 172);
+  border-color:rgb(10, 69, 117);
+  color:rgb(167, 36, 79);
+}
+.dark .listatarefas h2{
+  color:rgb(167, 36, 79) 
+}
+
+
+/*APP LISTA DE TAREFAS*/
+section{
+  background-image:url(https://i.pinimg.com/originals/bf/d0/1c/bfd01ce2fbbc75ebdf8864a3e6a9a79c.jpg);
+  width:400px;
+  height:500px;
+  color:steelblue;
+  border-radius:10px;
+  margin-top:50px;
+  font-family: 'Pacifico', cursive;
+  box-shadow: -20px -20px 0px 0px hsl(220, 47%, 91%);
+  
+  
+       
+  }
+
+/*CABEÇALHO DO APP*/
+header{
+  padding:0px 50px 0;
+  
+
+
+}
+header h1{
+  font-size:40px;
+  font-family: 'Pacifico', cursive;
+  padding-top:30px;
+  padding-left:90px;
+  padding-bottom:10px;
+  
+  
+}
+header p{
+  font-size:14px;
+  border-bottom:2px dashed palevioletred;
+  font-family: 'Pacifico', cursive;
+  padding:20px 30px;
+}
+
+/*AREA DE FORMULARIO DE TAREFAS*/
+.formulariodetarefas{
+  padding:40px 5px;
+  display:flex;
+ 
+  
+}
+.formulariodetarefas label{
+  display:none;
+  
+  
+}
+.formulariodetarefas input{
+  width:200px;
+  padding:8px 10px;
+  border:none;
+  font-family: 'Pacifico', cursive;
+ 
+ 
+}
+.formulariodetarefas button{
+  width:100px;
+  margin-left:3px;
+  background-color:skyblue;
+  border-color:steelblue;
+  color:palevioletred;
+  cursor:pointer;
+  font-family: 'Pacifico', cursive;
+    
+    
+}
+
+/*AREA LISTA DE TAREFAS*/
+.listatarefas{}
+.listatarefas ul{}
+.listatarefas li{
+  padding:5px 10px;
+  justify-content:space-between;
+  background-color:hsl(240,100%,50%,8%);
+  list-style:none;
+  font-size:10px;
+  display:flex;
+  margin-bottom:5px;
+  align-items:center;
+  font-family: 'Pacifico', cursive;
+  
+      
+}
+.listatarefas h2{
+  color:palevioletred;
+  font-size:15px;
+}
+
+.listatarefas li.tarefaFinalizada h2{
+  text-decoration: line-through;
+   opacity: .8;
+}
+
+.listaTarefas div{
+  display: flex;
+  align-items: center;
+}
+
+.listatarefas button{
+  font-family: 'Pacifico', cursive;
+  border-color:transparent;
+  background:hsl(240,100%,50%,2%);
+  cursor:pointer;
+
+}
+.listatarefas .botaoFinalizarTarefa{
+    background-image: url(./square.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+.listatarefas li.tarefaFinalizada .botaoFinalizarTarefa{
+    background-image: url(./check.svg);
+
+}
+
+/*AREA MODO NOTURNO*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+/* Uma classe que será atribuida ao ativar o checkbox*/
+.dark {
+  background-color: #05051d;
+}
+
+/* Centralização do conteúdo */
+.center {
+  position: absolute;
+  top: 80%;
+  right: 35%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none; /* Aparência padrão do checkbox é anulada */
+  background-color: #15145a; /* cor de fundo */
+  outline: none; /* sem borda externa */
+  border-radius: 20px; /* arrendodamento dos cantos */
+  box-shadow: inset 0 0 5px rgba(14, 25, 170, 0.979); /* sombra interna */
+  transition: .2s; /* tempo de transição que vai ocorrer com a cor de fundo e com a posção da bolinha*/
+  cursor: pointer;/* estabelecer que o mouse vai ter uma aparência como se fosse clicar em um botão */
+}
+
+input:checked[type="checkbox"] {
+  background-color: rgb(109, 161, 240);/* cor de fundo que vai ser aplicada quando o checkbox tiver uma alteração para checked */
+}
+/* O seletor :before pode criar objetos antes do elemento principal, no caso cria a bolinha do botão  */
+input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  transform: scale(1.2);
+  box-shadow: 0 2px 5px rgb(83, 141, 228);
+  transition: .2s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 20px;
+}
+
+/*root change*/
+
+
+
